@@ -6,7 +6,7 @@ A simple but complete boilerplate for begin a project with react, redux, react-r
 For install the dependencies
 
 ### yarn start
-For start the project
+For start the project `localhost:8080`
 
 ### yarn build
 For compile and generate the bundle.js
