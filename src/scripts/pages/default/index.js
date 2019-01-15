@@ -3,7 +3,6 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 
 // 3rd party
 import _ from 'lodash'
@@ -63,6 +62,7 @@ App.propTypes = {
 }
 
 const mapStateToProps = (states) => {
+  /* istanbul ignore next */
   const { defaultReducer: { content } } = states
   return { content }
 }

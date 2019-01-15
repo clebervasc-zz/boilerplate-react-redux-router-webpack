@@ -1,19 +1,21 @@
 // React/Redux core
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import configureStore from 'organisms/Store'
+
+const store = configureStore()
+
 
 // App
 import App from 'pages/default'
 
-const Store = configureStore()
-
 const Routes = () => (
-  <Provider store={Store}>
+  <Provider store={store}>
     <Router>
       <Switch>
-          <Route path="/" exact component={App} />
+        <Route path="/" exact component={App} />
       </Switch>
     </Router>
   </Provider>
