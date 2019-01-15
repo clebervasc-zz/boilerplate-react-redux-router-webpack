@@ -15,4 +15,4 @@ For compile and generate the bundle.js
 ### serve -s public*
 For view the project build
 
-* A local server `is required` to see the project build
+*A local server `is required` to see the project build
