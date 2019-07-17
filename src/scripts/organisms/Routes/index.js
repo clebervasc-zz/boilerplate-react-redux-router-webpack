@@ -1,22 +1,20 @@
 // React/Redux core
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Router, Route, browserHistory } from 'react-router'
+import { syncHistoryWithStore } from 'react-router-redux'
 import configureStore from 'organisms/Store'
-
-const store = configureStore()
-
 
 // App
 import App from 'pages/default'
 
+const store = configureStore()
+const history = syncHistoryWithStore(browserHistory, store)
+
 const Routes = () => (
   <Provider store={store}>
-    <Router>
-      <Switch>
-        <Route path="/" exact component={App} />
-      </Switch>
+    <Router history={history}>
+      <Route component={App} path='/' />
     </Router>
   </Provider>
 )
